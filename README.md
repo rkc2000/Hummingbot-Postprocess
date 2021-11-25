@@ -19,4 +19,4 @@ Sample outputs:
 
 <br />
 
-<img src=sample_analysis.png width="600" height="400">
+<img src=sample_analysis.png width="400" height="250">
