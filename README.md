@@ -1,6 +1,8 @@
 Script to visualise and analyse performance of high-frequency crypto trading bots using Hummingbot
 (https://github.com/CoinAlpha/hummingbot)
  
+<br />
+
 
 | Inputs to be provided        | Sample imputs  |
 | ------------- |------------- | 
@@ -9,9 +11,12 @@ Script to visualise and analyse performance of high-frequency crypto trading bot
 | start_time    | '/Users/xxx/hummingbot_data/trades.csv'   |  
 | trades_path     | '/Users/xxx/hummingbot_data/trades.csv' |
 
-
+<br />
 
 Sample outputs: 
 
 ![Sample output plot](sample_plot.png)
-<img src=sample_analysis.png width="100" height="100")
+
+<br />
+
+<img src=sample_analysis.png width="600" height="400">
