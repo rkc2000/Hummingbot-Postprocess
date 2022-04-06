@@ -4,7 +4,7 @@ Script to visualise and analyse performance of high-frequency crypto trading bot
 <br />
 
 
-| Inputs to be provided        | Sample imputs  |
+| Inputs to be provided        | Sample inputs  |
 | ------------- |------------- | 
 | exchange      | 'ascendex' / 'binance' / 'kucoin' | 
 | pair          |  'ATLAS/USDT  |  
