@@ -9,9 +9,10 @@ from prettytable import PrettyTable
 
 # Enter/modify the following: 
 exchange = 'ascendex'
-market = 'ATLAS/USDT'
-start_time = datetime(2021, 11, 23, 19, 0, 00) #Year, Month, Day, Hour, Minute, Second
-trades_path = '/Path_TO/trades.csv'
+market = 'CNTR/USDT'
+start_time = datetime(2022, 2, 9, 22, 00, 00) #Year, Month, Day, Hour, Minute, Second
+trades_path = '/Users/kiran/HobbyWork/hummingbot-1/data/trades_conf_cntr.csv'
+fees_percent = 0.2
 
 # Automatic calcualtion of candlestick interval
 def calc_candlestick_interval(start_time, max_limit=500):
@@ -64,7 +65,8 @@ total_buy_amount = sum(buy_trades['amount'])
 total_sell_amount = sum(sell_trades['amount'])
 n_sells = len(sell_trades.index)
 trade_volume = sum(sell_trades['amount']*sell_trades['price']) + sum(buy_trades['amount']*buy_trades['price'])
-trade_pnl = avg_spread*trade_volume/(2*df_bars['close'].iloc[-1])
+fees = fees_percent/100*trade_volume
+trade_pnl = avg_spread*trade_volume/(2*df_bars['close'].iloc[-1]) - fees
 
 #Plot buys and sells with price history 
 fig1 = px.line(df_bars, x="timestamp", y="high")
@@ -86,7 +88,8 @@ t.add_row(['Number of sell trades', n_sells])
 t.add_row(['Average buy price', "{:.6f}".format(avg_buy)])
 t.add_row(['Average sell price', "{:.6f}".format(avg_sell)])
 t.add_row(['Average spread', "{:.6f}".format(avg_spread)])
-t.add_row(['Trade pnl (in quote)', "{:.2f}".format(trade_pnl)])
+t.add_row(['Fees (in quote)', "{:.2f}".format(fees)])
+t.add_row(['Trade pnl after fees (in quote)', "{:.2f}".format(trade_pnl)])
 t.add_row(['Trade volume (in quote)', "{:.2f}".format(trade_volume)])
 t.add_row(['Change in base asset', "{:.2f}".format(total_buy_amount-total_sell_amount)])
 t.add_row(['Pnl percentage of trade volume', "{:.2f}".format(trade_pnl/trade_volume*100)])
