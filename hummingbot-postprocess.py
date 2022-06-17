@@ -11,7 +11,7 @@ from prettytable import PrettyTable
 exchange = 'ascendex'
 market = 'CNTR/USDT'
 start_time = datetime(2022, 2, 9, 22, 00, 00) #Year, Month, Day, Hour, Minute, Second
-trades_path = '/Users/kiran/HobbyWork/hummingbot-1/data/trades_conf_cntr.csv'
+trades_path = '/Users/...../hummingbot/data/trades.csv'
 fees_percent = 0.2
 
 # Automatic calcualtion of candlestick interval
