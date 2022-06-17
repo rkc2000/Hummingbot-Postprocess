@@ -16,8 +16,9 @@ Script to visualise and analyse performance of high-frequency crypto trading bot
 
 Sample outputs: 
 
-![Sample output plot](sample_plot.png)
+
+![Sample output plot](https://user-images.githubusercontent.com/6465285/174404165-43c1e30b-c0ea-45d3-ab93-d41f639f288f.png)
 
 <br />
 
-<img src=sample_analysis.png width="400" height="250">
+![Sample output statistics](https://user-images.githubusercontent.com/6465285/174404176-907c69b2-c9da-49b5-b675-1899935b50ae.png)
